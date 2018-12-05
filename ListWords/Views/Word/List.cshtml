@@ -1,0 +1,35 @@
+﻿@using ListWords.Models;
+@model List<ListWords.Models.Words>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List Top 10 Words</title>
+</head>
+<body>
+    <div> 
+        <table class="table table-responsive table-bordered">
+            <thead style="background-color:Highlight">
+                <tr>
+                    <th>Word</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                <tr>
+                    <td>@item.Word</td>
+                    <td>@item.Count</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
